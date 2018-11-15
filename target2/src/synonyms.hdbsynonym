@@ -1,0 +1,8 @@
+{
+  "CrossHDI.target2::sbook": {
+    "target": {
+      "object": "CrossHDI.target::sbook",
+      "schema": "CROSSHDI_HDI1_1"
+    }
+  }
+}

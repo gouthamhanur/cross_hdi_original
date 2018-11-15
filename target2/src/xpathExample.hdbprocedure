@@ -1,0 +1,23 @@
+PROCEDURE "CrossHDI.target2::xpathExample" ( in xmlinputtab table ( XMLOUT1  NVARCHAR(100) ),
+	out XMLOUT1  NVARCHAR(100) ,
+	out XMLOUT2  NVARCHAR(100) 
+)
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+   READS SQL DATA AS
+BEGIN
+   /*************************************
+       Write your procedure logic 
+   *************************************/
+declare var_int int ;
+   
+ --select count(*) into var_int from :xmlinputtab;
+ 
+XMLOUT1 = 'XMIOUTPUT1';
+
+XMLOUT2 = 'XMLOUTPUT2';
+
+
+
+END

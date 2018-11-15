@@ -1,0 +1,8 @@
+{
+  "CrossHDI.target::SBOOK": {
+    "target": {
+      "object": "SBOOK",
+      "schema": "XSA_TABLES"
+    }
+  }
+}

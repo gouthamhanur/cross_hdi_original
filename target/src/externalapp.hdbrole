@@ -1,0 +1,12 @@
+{
+"role":{
+"name": "CrossHDI.target::external",
+"schema_privileges": [{
+		   "privileges": ["SELECT METADATA", 
+		    			  "SELECT CDS METADATA", 
+			    	     "SELECT", 
+		    			  "EXECUTE"
+		   ]
+		}]
+ }
+}

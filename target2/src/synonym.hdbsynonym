@@ -1,0 +1,8 @@
+{
+  "CrossHDI.target2::targetbook": {
+    "target": {
+      "object": "CrossHDI.target::test_intra_dep",
+      "schema": "CROSSHDI_HDI1_1"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+"hdi1-logical-service": {
+		"object_owner": { 
+			"container_roles": [
+				"CrossHDI.target::external#"
+			]},
+			"application_user":
+			{
+				"container_roles": [
+				"CrossHDI.target::external"
+			]
+			}
+			}
+			}

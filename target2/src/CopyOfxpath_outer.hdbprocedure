@@ -1,0 +1,17 @@
+PROCEDURE "CrossHDI.target2::xpathExample_outer" ( )
+   LANGUAGE SQLSCRIPT
+   SQL SECURITY INVOKER
+   --DEFAULT SCHEMA <default_schema_name>
+   READS SQL DATA AS
+BEGIN
+   /*************************************
+       Write your procedure logic 
+   *************************************/
+   declare output1 varchar(100);
+        declare    output2 varchar(100);
+            
+input_v = select carrid as XMLOUT1 from "CrossHDI.target2::view_3";
+
+call "CrossHDI.target2::xpathExample"(:input_v,output1,output2);
+
+END

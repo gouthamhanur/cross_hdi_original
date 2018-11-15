@@ -1,0 +1,78 @@
+ID: CrossHDI
+_schema-version: '2.0'
+version: 0.0.1
+modules:
+  - name: target
+    type: hdb
+    path: target
+    requires:
+      - name: hdi1
+        properties:
+          TARGET_CONTAINER: '~{hdi1-name}'
+      - name: sflight-grantor
+      
+  - name: dependent
+    type: hdb
+    path: dependent
+    requires:
+      - name: hdi2
+        properties:
+          TARGET_CONTAINER: '~{hdi2-name}'
+      - name: hdi1
+        group: SERVICE_REPLACEMENTS
+        properties:
+          key: hdi1-logical-service
+          service: '~{hdi1-name}'
+          
+
+  - name: target2
+    type: hdb
+    path: target2
+    requires:
+      - name: hdi3
+        properties:
+          TARGET_CONTAINER: '~{hdi3-name}'
+      - name: hdi1
+        group: SERVICE_REPLACEMENTS
+        properties:
+          key: hdi1-logical-service
+          service: '~{hdi1-name}'     
+      
+
+  - name: dependent_3
+    type: hdb
+    path: dependent_3
+    requires:
+      - name: hdi5
+        properties:
+          TARGET_CONTAINER: '~{hdi5-name}'
+      - name: hdi1
+        group: SERVICE_REPLACEMENTS
+        properties:
+          key: hdi1-logical-service
+          service: '~{hdi1-name}'    
+
+resources:
+  - name: hdi1
+    properties:
+      hdi1-name: '${service-name}'
+    type: com.sap.xs.hdi-container
+    
+  - name: sflight-grantor
+    type: org.cloudfoundry.existing-service
+    
+  - name: hdi2
+    properties:
+      hdi2-name: '${service-name}'
+    type: com.sap.xs.hdi-container
+
+  - name: hdi3
+    properties:
+       hdi3-name: ${service-name}
+    type: com.sap.xs.hdi-container
+
+  - name: hdi5
+    properties:
+       hdi5-name: ${service-name}
+    type: com.sap.xs.hdi-container
+

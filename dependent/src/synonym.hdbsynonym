@@ -1,0 +1,8 @@
+{
+  "CrossHDI.dependent::Synonym_0": {
+    "target": {
+      "object": "CrossHDI.target::sbook",
+      "schema": "CROSSHDI_HDI1_1"
+    }
+  }
+}
